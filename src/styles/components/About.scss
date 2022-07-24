@@ -1,0 +1,140 @@
+.about-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background-color: rgb(203, 252, 203);
+}
+
+.about-container {
+  display: flex;
+  padding: 0 134px;
+  gap: 20px;
+}
+
+.about-copy-container {
+    padding-right: 40px;
+}
+
+.about-copy-container,
+.about-img-container {
+  max-width: 50%;
+}
+
+.about-img-container {
+  width: 50%;
+  position: relative;
+}
+
+.about-title,
+.about-copy {
+  margin: 0;
+  padding: 0;
+  color: $font-color;
+}
+
+.about-title {
+  font-size: clamp(35px, 5vw, 50px);
+  margin-bottom: 32px;
+}
+
+.about-copy {
+  font-size: clamp(18px, 2vw, 25px);
+  margin-bottom: 48px;
+  line-height: 2.5rem;
+}
+
+.about-img-container {
+  position: relative;
+}
+
+.about-floating-container {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+
+.about-floating-icon {
+  font-size: 40px;
+}
+
+.about-floating-container:nth-child(1) {
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+  
+.about-floating-container:nth-child(2) {
+    top: 13%;
+    left: 70%;
+}
+
+.about-floating-container:nth-child(3) {
+    top: 16%;
+    left: 20%;
+}
+
+$colors: #caaafa, #f4fda8, #a9efa9;
+
+@each $color in $colors {
+  $i: index($colors, $color);
+  .about-floating-container:nth-child(#{$i}) {
+    background-color: $color;
+  }
+}
+
+@media (max-width: 700px) { 
+    .about-container {
+        display: block;
+    }
+
+    .about-copy-container {
+        max-width: 100%;
+      }
+
+      .about-img-container {
+        width: 100%;
+        display: flex;
+        gap: 20px;
+      }
+      
+      .about-floating-container:nth-child(n) {
+        top: 0%;
+        left: 0%;
+        width: 70px;
+        height: 70px;
+        min-width: 70px;
+        min-height: 70px;
+        transform: translateX(0%);
+        flex: 1;
+    }
+
+    .about-floating-icon {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 500px) {
+  .about-container {
+    display: block;
+    padding: 0 40px;
+  }
+
+  .about-floating-container {
+    // display: none;
+  }
+
+  .about-copy-container {
+    max-width: 100%;
+  }
+
+  
+
+
+}

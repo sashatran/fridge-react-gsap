@@ -1,0 +1,44 @@
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.hero-container {
+    text-align: center;
+}
+
+.hero-title, .hero-copy {
+    margin: 0;
+    padding: 0;
+    color: $font-color;
+}
+
+.hero-title {
+    font-size: clamp(50px, 5vw, 70px);
+    margin-bottom: 32px;
+}
+.hero-copy {
+    font-size: clamp(20px, 2vw, 30px);
+    margin-bottom: 48px;
+}
+
+.hero-cta-btn {
+    color: $font-color;
+    border-radius: 50px;
+    width: 200px;
+    height: 40px;
+    background: linear-gradient(30deg, #CFEECC, #9AD654);
+    display: grid;
+    place-items: center;
+    margin: 0 auto;
+}
+
+@media (max-width: 500px) {
+
+    .hero-container {
+        padding: 40px;
+    }
+
+}

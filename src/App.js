@@ -1,23 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import './styles/App.scss';
+import Header from './components/Header';
+import Hero from './components/Hero';
+import About from './components/About';
+import Produce from './components/Produce';
+import { useEffect } from 'react';
+//router
 
 function App() {
+
+  useEffect(() => {
+    const handleScroll = () => {
+    let header = document.querySelector('.header');
+      const scroll = document.documentElement.scrollTop; 
+      if(scroll === 0) {
+        header.style.boxShadow = "";
+      } else {
+        header.style.boxShadow = "1px 1px 1px #777";
+      }
+    }
+      window.addEventListener('scroll', handleScroll); 
+    return () => {
+      window.removeEventListener('scroll', handleScroll); 
+    }
+  })
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header /> 
+      <Hero />
+      <About />
+      <Produce />
     </div>
   );
 }

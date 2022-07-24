@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap');
+@import './variables.scss';
+
+@import './components/Header.scss';
+@import './components/Hero.scss';
+@import './components/About.scss';
+@import './components/Produce.scss';
+
+.App {
+    font-family: 'Inter', sans-serif;
+}

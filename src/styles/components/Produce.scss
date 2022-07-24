@@ -1,0 +1,64 @@
+@import "./CarouselItem.scss";
+
+.produce-section {
+    // height: 100vh;
+  position: relative;
+  padding: 250px 0;
+
+  color: $font-color;
+}
+
+.produce-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  height: 100%;
+  padding: 0 134px;
+  gap: 20px;
+}
+
+.produce-title,
+.produce-copy {
+  margin: 0;
+  padding: 0;
+}
+
+.produce-title {
+  margin: 0;
+  padding: 0;
+  color: $font-color;
+  font-size: clamp(35px, 5vw, 50px);
+  margin-bottom: 0.2rem;
+}
+
+.produce-copy {
+  font-size: clamp(20px, 2vw, 25px);
+  margin-bottom: 1rem;
+  line-height: 2.5rem;
+}
+
+//Carousel
+
+.produce-carousel {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+
+
+@media (max-width: 500px) {
+  .produce-container {
+    display: block;
+    padding: 0 40px;
+  }
+
+  .produce-title {
+    margin-bottom: 1rem;
+  }
+
+  .carousel-item {
+    margin-top: 25px;
+  }
+}
