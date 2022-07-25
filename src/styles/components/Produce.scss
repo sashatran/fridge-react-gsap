@@ -1,7 +1,6 @@
 @import "./CarouselItem.scss";
 
 .produce-section {
-    // height: 100vh;
   position: relative;
   padding: 250px 0;
 
@@ -39,14 +38,11 @@
 }
 
 //Carousel
-
 .produce-carousel {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
 }
-
-
 
 @media (max-width: 500px) {
   .produce-container {
