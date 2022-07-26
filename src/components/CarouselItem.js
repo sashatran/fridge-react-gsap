@@ -1,5 +1,7 @@
+
+
 export default function CarouselItem({ title, copy, image }) {
-  return (
+ return (
     <div className="carousel-item">
       <div
         className="c-item-img-container"

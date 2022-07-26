@@ -1,4 +1,8 @@
 import CarouselItem from './CarouselItem';
+import { useEffect } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Produce() {
     const carousel = [
@@ -23,6 +27,34 @@ export default function Produce() {
             image: "/assets/tomato.jpg"
         }
     ]
+
+    useEffect(() => {
+      gsap.from([".produce-title", ".produce-copy"], {
+        y: 30, 
+        opacity: 0, 
+        duration: 0.5,
+        stagger: 0.12,
+        scrollTrigger: {
+          trigger: ".produce-section",
+          start: "top center",
+          once: true
+        }
+      })
+    }, []); 
+
+    useEffect(() => {
+      gsap.from(".produce-carousel > *", {
+        y: 30, 
+        opacity: 0, 
+        duration: 0.4,
+        stagger: 0.12,
+        scrollTrigger: {
+          trigger: ".produce-section",
+          start: "top center",
+          toggleActions: "play none none reverse",
+        }
+      })
+    })
 
   return (
     <section className="produce-section">
