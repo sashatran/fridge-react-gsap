@@ -11,20 +11,20 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function About() {
   useEffect(() => {
-    gsap.fromTo(".about-title-curtain", {
-      scaleX: "100%",
-      transformOrigin: "100% 0",
-    }, {
-      scaleX: 0,
-      duration: 0.7, 
-      scrollTrigger: {
-        trigger: ".about-section",
-        start: "top center",
-        // markers: true,
-        // toggleActions: "play none none reverse",
-        once: true
-      }
-    })
+    // gsap.fromTo(".about-title-curtain", {
+    //   scaleX: "100%",
+    //   transformOrigin: "100% 0",
+    // }, {
+    //   scaleX: 0,
+    //   duration: 0.5, 
+    //   scrollTrigger: {
+    //     trigger: ".about-section",
+    //     start: "top center",
+    //     // markers: true,
+    //     // toggleActions: "play none none reverse",
+    //     once: true
+    //   }
+    // })
 
 
     const floatingImg = document.querySelectorAll(".about-floating-container");
@@ -39,7 +39,7 @@ export default function About() {
         scrollTrigger: {
           id: `img-${index}`, 
           trigger: ".about-img-container",
-          start: "top center+=100px",
+          start: "top center",
           // markers: true,
           toggleActions: "play none none reverse",
         },

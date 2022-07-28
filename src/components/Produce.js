@@ -44,9 +44,9 @@ export default function Produce() {
 
     useEffect(() => {
       gsap.from(".produce-carousel > *", {
-        y: 30, 
+        y: 40, 
         opacity: 0, 
-        duration: 0.4,
+        duration: 0.5,
         stagger: 0.12,
         scrollTrigger: {
           trigger: ".produce-section",
