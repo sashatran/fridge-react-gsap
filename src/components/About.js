@@ -74,9 +74,9 @@ export default function About() {
       opacity: 0,
       stagger: 0.2,
       scrollTrigger: {
-        trigger: ".about-section",
-        start: "top center",
-        markers: true,
+        trigger: ".about-container",
+        start: "top bottom",
+        // markers: true,
         toggleActions: "play none none reverse",
       },
     });

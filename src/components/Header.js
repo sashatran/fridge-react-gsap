@@ -21,7 +21,7 @@ export default function Header() {
       <div className="header-container">
         <div className="logo-container">
           <div className="logo-img"></div>
-          <p className="logo-copy">Fridge.</p>
+          <p className="logo-copy">FridgeSwap.</p>
         </div>
         <nav className="nav">
           <ul className="nav-list">
