@@ -58,11 +58,11 @@
 .hero-cta {
   width: 300px;
   padding: 20px;
-//   border: 1px solid #555;
-//   border: 10px solid;
-//   border-image-slice: 1;
-//   border-width: 2px;
-//   border-image-source: linear-gradient(to left, #5c8494, #9ad654);
+  //   border: 1px solid #555;
+  //   border: 10px solid;
+  //   border-image-slice: 1;
+  //   border-width: 2px;
+  //   border-image-source: linear-gradient(to left, #5c8494, #9ad654);
 }
 
 .hero-cta-copy {
@@ -70,7 +70,20 @@
 }
 
 @media (max-width: 500px) {
+  .hero-section {
+    height: auto;
+    padding: 0 50px;
+  }
   .hero-container {
     padding: 40px;
+  }
+  .hero-cta-container {
+    display: block;
+    width: 100%;
+  }
+  .hero-cta {
+    width: 100%;
+    margin: 50px 0;
+    padding: 0;
   }
 }
