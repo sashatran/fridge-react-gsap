@@ -18,6 +18,8 @@ export default function Hero() {
   return (
     <section className="hero-section">
       <div className="hero-container">
+      <img className="hero-3d-icon lemon" src="/assets/lemon-3d.png" alt="" />
+        {/* <img className="hero-3d-icon pancake" src="/assets/pancake.png" alt="" /> */}
         <div className="hero-copy-container">
           <h1 className="hero-title">Your fridge but better.</h1>
           <p className="hero-copy">Bacon Driven. Open Economy.</p>

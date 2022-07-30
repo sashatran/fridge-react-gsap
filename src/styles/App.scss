@@ -9,3 +9,12 @@
 .App {
     font-family: 'Inter', sans-serif;
 }
+
+.footer {
+    text-align: center;
+}
+
+.footer a {
+    text-decoration: none;
+    color: $font-color;
+}

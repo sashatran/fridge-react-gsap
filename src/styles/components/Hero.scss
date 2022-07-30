@@ -2,9 +2,25 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: calc(100vh - 120px);
   flex-direction: column;
   padding: 0 134px;
+  position: relative;
+}
+
+.hero-3d-icon {
+  position: absolute;
+  width: 150px;
+}
+
+.lemon {
+  top: 50%;
+  right: 12%;
+}
+
+.pancake {
+  // top: 20%;
+  left: 12%;
 }
 
 .hero-container {
@@ -70,12 +86,24 @@
 }
 
 @media (max-width: 500px) {
+
+    .pancake {
+        top: 8%;
+    }
+  .lemon,
+  .pancake {
+    width: 100px;
+  }
   .hero-section {
     height: auto;
     padding: 0 50px;
   }
   .hero-container {
     padding: 40px;
+  }
+
+  .hero-copy-container {
+    margin: 150px 0;
   }
   .hero-cta-container {
     display: block;
