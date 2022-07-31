@@ -114,9 +114,10 @@
   border-radius: 50px;
   font-size: 16px;
   text-align: center;
-  background: var(--about-cta);
+  background: var(--about-cta-bg);
   font-weight: 500;
-  color: $font-color;
+  color: var(--about-cta-text);
+  cursor: pointer;
 }
 
 @media (max-width: 1100px) {

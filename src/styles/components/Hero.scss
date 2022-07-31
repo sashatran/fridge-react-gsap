@@ -7,6 +7,7 @@
   padding: 0 134px;
   position: relative;
   margin-top: 59px;
+
 }
 
 .hero-3d-icon {
@@ -82,10 +83,17 @@
   color: var(--text-color);
 }
 
+@media (max-width: 1200px) {
+  .hero-section {
+    // margin-bottom: 100px;
+  }
+}
+
 @media (max-width: 600px) {
   .hero-section {
     height: auto;
     padding: 0 50px;
+    margin-bottom: 50px;
   }
   .hero-container {
     padding: 0;

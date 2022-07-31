@@ -1,35 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap");
 @import "./variables.scss";
-
 @import "./components/Header.scss";
 @import "./components/Hero.scss";
 @import "./components/About.scss";
 @import "./components/Produce.scss";
-
-.App {
-  font-family: "Inter", sans-serif;
-  background-color: vaR(--background);
-}
-
-.footer {
-  text-align: center;
-  font-size: 13px;
-  height: 30px;
-  color: var(--text-color);
-}
-
-.footer a {
-  text-decoration: none;
-  color: var(--text-color);
-}
+@import "./components/Footer.scss";
 
 .dark {
   --header-background: #202020;
   --header-text: #cfeecc;
   --background: rgb(41, 41, 41);
   --text-color: white;
-  --about-section-wave: linear-gradient(to bottom, #84a67d, #d9d96d);
-  --about-cta: rgb(241, 241, 241);
+  --about-section-wave: linear-gradient(to bottom, #84a67d, #4a6545);
+  --about-cta-bg: rgb(241, 241, 241);
+  --about-cta-text: #4a6545;
+  --footer-background: #202020;
+  --footer-text: #cfeecc;;
 }
 
 .light {
@@ -37,6 +23,14 @@
   --text-color: #444;
   --header-background: #cfeecc;
   --header-text: #444;
-  --about-section-wave: linear-gradient(to bottom, #bbecb6, #f8ddaa);
-  --about-cta: rgb(241, 241, 241);
+  --about-section-wave: linear-gradient(to bottom, #bbecb6, #f7fdb4);
+  --about-cta-bg: rgb(86, 137, 89);
+  --about-cta-text: #fff;
+  --footer-background: #444;
+  --footer-text: #fff;
+}
+
+.App {
+  font-family: "Inter", sans-serif;
+  background-color: vaR(--background);
 }

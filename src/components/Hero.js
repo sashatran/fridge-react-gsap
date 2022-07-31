@@ -44,7 +44,7 @@ export default function Hero() {
           </div>
           <div className="hero-cta">
             <h2 className="hero-cta-title">Transactions</h2>
-            <p className="hero-cta-copy">Capable of 6 transations per min</p>
+            <p className="hero-cta-copy">Capable of 6 transations per minute or we'll give you Bacon. </p>
           </div>
         </div>
       </div>

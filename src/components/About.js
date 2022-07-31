@@ -90,15 +90,15 @@ export default function About() {
           <img
             className="about-floating-icon chocolate"
             src="/assets/chocolate.png"
-            alt=""
+            alt="chocolate"
           />
 
-          <img className="about-floating-icon" src="/assets/mango.png" alt="" />
+          <img className="about-floating-icon" src="/assets/mango.png" alt="mango" />
 
           <img
             className="about-floating-icon icecream"
             src="/assets/icecream.png"
-            alt=""
+            alt="ice cream"
           />
         </div>
       </div>

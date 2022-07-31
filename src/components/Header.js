@@ -1,37 +1,44 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronDown, faMoon } from "@fortawesome/free-solid-svg-icons";
+import {
+  faChevronDown,
+  faMoon,
+  faSun,
+} from "@fortawesome/free-solid-svg-icons";
 import gsap from "gsap";
-import { useEffect, useState } from "react";
+import { useState, useContext } from "react";
+import { ThemeContext } from "../context/ThemeContext";
 
-export default function Header({ toggleThemeHandler }) {
+export default function Header() {
+  const { theme, toggleTheme } = useContext(ThemeContext);
+
+  const toggleThemeHandler = () => {
+    toggleTheme(theme === "dark" ? "light" : "dark");
+  };
+
   const [menuState, setMenuState] = useState(false);
-  
 
   const tl = gsap.timeline();
   const openMenu = () => {
     if (menuState) {
-      console.log("close menu");
       closeMenuAnimation();
     } else {
-      console.log("open menu");
       openMenuAnimation();
     }
     setMenuState(!menuState);
   };
 
   const closeMenuAnimation = () => {
-    tl
-    .to("body", { css: { overflow: "scroll" }, duration: 0 })
-    .to(".mobile-nav-btn", { rotate: 0, duration: 0.1 }).to(
-      ".mobile-nav-menu",
-      {
-        y: "-50vh",
+    document.querySelector(".mobile-nav-btn").classList.remove("open");
+    tl.to("body", { css: { overflow: "scroll" }, duration: 0 })
+      .to(".mobile-nav-btn", { rotate: 0, duration: 0.1 })
+      .to(".mobile-nav-menu", {
+        y: "-70vh",
         duration: 0.2,
-      }
-    );
+      });
   };
 
   const openMenuAnimation = () => {
+    document.querySelector(".mobile-nav-btn").classList.add("open");
     tl.to("body", { css: { overflow: "hidden" }, duration: 0 })
       .to(".mobile-nav-menu", { display: "block", opacity: 1, duration: 0 })
       .to(".mobile-nav-btn", { rotate: 180, duration: 0.1 })
@@ -40,8 +47,6 @@ export default function Header({ toggleThemeHandler }) {
         duration: 0.2,
       });
   };
-
-  useEffect(() => {});
 
   return (
     <header className="header">
@@ -57,7 +62,13 @@ export default function Header({ toggleThemeHandler }) {
             <li className="nav-list-item">Connect Wallet</li>
           </ul>
         </nav>
-        <button className="theme-toggle-btn" onClick={toggleThemeHandler}><FontAwesomeIcon icon={faMoon} /></button>
+        <button className="theme-toggle-btn" onClick={toggleThemeHandler}>
+          {theme === "light" ? (
+            <FontAwesomeIcon icon={faMoon} />
+          ) : (
+            <FontAwesomeIcon icon={faSun} />
+          )}
+        </button>
         <div className="mobile-nav-btn" onClick={openMenu}>
           <FontAwesomeIcon className="mobile-nav-icon" icon={faChevronDown} />
         </div>

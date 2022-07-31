@@ -61,7 +61,8 @@
   border-radius: 50%;
   width: 25px;
   height: 25px;
-  border: 1px solid #2b4760;
+  border: 1px solid var(--text-color);
+  color: var(--text-color);
   display: grid;
   place-items: center;
   position: relative;
@@ -78,7 +79,12 @@
   top: 0;
   left: 0;
   background-color: $main-color;
-  transform: translate(0, -50vh);
+  transform: translate(0, -70vh);
+  padding-top: 100px;
+}
+
+.open {
+  color: #444;
 }
 
 .mobile-nav-menu ul {

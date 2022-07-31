@@ -3,16 +3,14 @@ import Header from "./components/Header";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Produce from "./components/Produce";
+import Footer from "./components/Footer";
 import { useEffect, useContext } from "react";
 import { ThemeContext } from './context/ThemeContext';
 
 //router
 function App() {
-  const { theme, toggleTheme} = useContext(ThemeContext);
+  const { theme } = useContext(ThemeContext);
 
-  const toggleThemeHandler = () => {
-    toggleTheme(theme === 'dark' ? 'light' : 'dark') 
-  }
 
   useEffect(() => {
     const handleScroll = () => {
@@ -32,17 +30,11 @@ function App() {
 
   return (
     <div className={`App ${theme}`}>
-      <Header toggleThemeHandler={toggleThemeHandler}/>
+      <Header />
       <Hero />
       <About />
       <Produce />
-      <p className="footer">
-        Illustration by{" "}
-        <a href="https://icons8.com/illustrations/author/zD2oqC8lLBBA">
-          Icons 8
-        </a>{" "}
-        from <a href="https://icons8.com/illustrations">Ouch!</a>
-      </p>
+      <Footer />
     </div>
   );
 }
