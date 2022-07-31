@@ -13,17 +13,21 @@ export default function Hero() {
       ease: "power4.out",
       delay: 0.2,
     });
-  });
+  }, []);
 
   return (
     <section className="hero-section">
       <div className="hero-container">
-      <img className="hero-3d-icon lemon" src="/assets/lemon-3d.png" alt="" />
-        {/* <img className="hero-3d-icon pancake" src="/assets/pancake.png" alt="" /> */}
+        <img className="hero-3d-icon lemon" src="/assets/lemon-3d.png" alt="lemon" />
+        <img
+          className="hero-3d-icon pancake"
+          src="/assets/pancake.png"
+          alt="pancake"
+        />
         <div className="hero-copy-container">
           <h1 className="hero-title">Your fridge but better.</h1>
           <p className="hero-copy">Bacon Driven. Open Economy.</p>
-          <div className="hero-cta-btn">Join Us</div>
+          <div className="hero-cta-btn">Swap Now</div>
         </div>
         <div className="hero-cta-container">
           <div className="hero-cta">

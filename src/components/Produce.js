@@ -54,7 +54,7 @@ export default function Produce() {
           toggleActions: "play none none reverse",
         }
       })
-    })
+    }, [])
 
   return (
     <section className="produce-section">

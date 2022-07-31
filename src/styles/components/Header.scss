@@ -1,65 +1,110 @@
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #CFEECC;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    z-index: 999;
-    height: 60px;
-    width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--header-background);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  z-index: 999;
+  height: 60px;
+  width: 100%;
 }
 
 .header-container {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 20px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px;
 }
 
 .logo-copy {
-    font-weight: 700;
-    color: #2b4760;
-    margin: 0;
-    padding: 0;
+  font-weight: 700;
+  color: var(--header-text);;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-list {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 40px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 40px;
+  align-items: center;
 
-    &-item {
-        list-style-type: none;
-        color: #444;
-        font-size: 14px;
-        font-weight: 500;
-    }
+  &-item {
+    list-style-type: none;
+    color: var(--header-text);
+    font-size: 14px;
+    font-weight: 500;
+  }
 }
 
+
+.theme-toggle-btn {
+  background: none;
+  font-size: clamp(18px, 2vw, 20px);
+  border: none;
+  color: var(--text-color);
+  border-radius: 50px;
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  
+}
+
+// mobile menu
+
 .mobile-nav-btn {
-    display: none;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  border: 1px solid #2b4760;
+  display: grid;
+  place-items: center;
+  position: relative;
+  display: none;
+  z-index: 10000;
+}
+
+.mobile-nav-menu {
+  display: none;
+  width: 100%;
+  position: absolute;
+  height: 50vh;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  background-color: $main-color;
+  transform: translate(0, -50vh);
+}
+
+.mobile-nav-menu ul {
+  padding: 0;
+  margin: 0;
+  padding: 30px;
+}
+
+.mobile-nav-menu li {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+  font-size: 30px;
 }
 
 @media (max-width: 500px) {
-    .nav-list {
-        display: none;
-    }
+  .nav-list {
+    display: none;
+  }
 
-    .mobile-nav-btn {
-        display: block;
-        border-radius: 50%;
-        width: 25px;
-        height: 25px;
-        border: 1px solid #2b4760;
-        display: grid;
-        place-items: center;
-    }
+  .mobile-nav-btn {
+    display: grid;
+    place-items: center;
+  }
 
-    .mobile-nav-icon {
-        font-size: 12px;
-    }
+  .mobile-nav-icon {
+    font-size: 12px;
+  }
 }

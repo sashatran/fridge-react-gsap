@@ -13,6 +13,10 @@
   border-radius: 30px;
 }
 
+.c-item-title, .c-item-copy {
+  color: var(--text-color)
+}
+
 .c-item-title {
   font-size: clamp(20px, 2vw, 25px);
   font-weight: 500;

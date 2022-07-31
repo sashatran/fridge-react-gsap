@@ -6,16 +6,16 @@
   position: relative;
   overflow: hidden;
   background-color: rgb(203, 252, 203);
-  background: linear-gradient(to bottom, #CFEECC, transparent);
+  background: var(--about-section-wave);
 }
 
 .wave-svg {
   position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
 }
 
 .wave-svg svg {
@@ -27,18 +27,19 @@
 }
 
 .wave-svg .shape-fill {
-  fill: white;
+  fill: var(--background);
 }
-
 
 .about-container {
   display: flex;
   padding: 0 134px;
   gap: 20px;
+  width: 100%;
 }
 
 .about-copy-container {
-    padding-right: 40px;
+  padding-right: 40px;
+  width: 50%;
 }
 
 .about-copy-container,
@@ -55,7 +56,7 @@
 .about-copy {
   margin: 0;
   padding: 0;
-  color: $font-color;
+  color: var(--text-color);
 }
 
 .about-title {
@@ -84,41 +85,41 @@
 }
 
 .about-floating-icon {
-  font-size: 40px;
+  width: 80px;
+  position: absolute;
 }
 
-.about-floating-container:nth-child(1) {
-    top: -60%;
-    top: -120px;
-    left: 50%;
-    // left: 308px;
-
+.about-floating-icon:nth-child(1) {
+  top: -3vh;
+  left: 50%;
 }
-.about-floating-container:nth-child(2) {
-    // top: 25%;
-    left: 70%;
-    top: 29px;
-    // left: 483px;
+.about-floating-icon:nth-child(2) {
+  left: 80%;
+  top: 14vh;
 }
 
-.about-floating-container:nth-child(3) {
-    top: 56%;
-    left: 30%;
-    // top: 115px;
-    // left: 182px;
+.about-floating-icon:nth-child(3) {
+  top: 30vh;
+  left: 30%;
 }
 
-$colors: #caaafa, #f4fda8, #a9efa9;
+.chocolate,
+.icecream {
+  width: 60px;
+}
 
-@each $color in $colors {
-  $i: index($colors, $color);
-  .about-floating-container:nth-child(#{$i}) {
-    background-color: $color;
-  }
+.cta {
+  max-width: 200px;
+  padding: 10px 0;
+  border-radius: 50px;
+  font-size: 16px;
+  text-align: center;
+  background: var(--about-cta);
+  font-weight: 500;
+  color: $font-color;
 }
 
 @media (max-width: 1100px) {
-
   .wave-svg svg {
     width: 150%;
   }
@@ -126,7 +127,6 @@ $colors: #caaafa, #f4fda8, #a9efa9;
   .about-floating-container:nth-child(n) {
     position: static;
     margin-top: 30px;
-    // left: 0;
   }
 
   .about-img-container {
@@ -136,38 +136,31 @@ $colors: #caaafa, #f4fda8, #a9efa9;
   }
 }
 
-@media (max-width: 700px) { 
-    .about-container {
-        display: block;
-    }
+@media (max-width: 700px) {
+  .about-container {
+    display: block;
+  }
 
-    .about-copy-container {
-        max-width: 100%;
-      }
+  .about-copy-container {
+    max-width: 100%;
+  }
 
-      .about-img-container {
-        width: 100%;
-        flex-direction: row;
-        gap: 20px;
-      }
-      
-      .about-floating-container:nth-child(n) {
-        position: relative;
-        top: 0%;
-        left: 0%;
-        width: 70px;
-        height: 70px;
-        min-width: 70px;
-        min-height: 70px;
-        flex: 1;
-    }
+  .about-img-container {
+    width: 100%;
+    flex-direction: row;
+    gap: 40px;
+  }
 
-    .about-floating-icon {
-        font-size: 25px;
-    }
+  .about-floating-icon {
+    width: 40px;
+    position: static;
+  }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
+  .about-section {
+    padding-top: 100px;
+  }
   .about-container {
     display: block;
     padding: 0 40px;
@@ -176,5 +169,4 @@ $colors: #caaafa, #f4fda8, #a9efa9;
   .about-copy-container {
     max-width: 100%;
   }
-
 }

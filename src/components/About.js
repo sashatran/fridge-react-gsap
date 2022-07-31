@@ -1,17 +1,11 @@
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { useEffect } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faBurger,
-  faCarrot,
-  faBowlFood,
-} from "@fortawesome/free-solid-svg-icons";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function About() {
   useEffect(() => {
-    const floatingImg = document.querySelectorAll(".about-floating-container");
+    const floatingImg = document.querySelectorAll(".about-floating-icon");
 
     const fromAnim = {
       y: 70,
@@ -52,23 +46,6 @@ export default function About() {
       });
     });
 
-    floatingImg.forEach((img, index) => {
-      // gsap.from(img, {
-      //   y: 70,
-      //   opacity: 0,
-      //   duration: 1.5,
-      //   delay: 0.21 * index,
-      //   ease: "elastic.out",
-      //   scrollTrigger: {
-      //     id: `img-${index}`,
-      //     trigger: ".about-img-container",
-      //     start: "top bottom",
-      //     markers: true,
-      //     toggleActions: "play none none reverse",
-      //   },
-      // });
-    });
-
     gsap.from(".about-copy-container > *", {
       x: -40,
       opacity: 0,
@@ -84,35 +61,45 @@ export default function About() {
 
   return (
     <section className="about-section">
-      <div class="wave-svg">
-    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-        <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
-    </svg>
-</div>
+      <div className="wave-svg">
+        <svg
+          data-name="Layer 1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+            className="shape-fill"
+          ></path>
+        </svg>
+      </div>
       <div className="about-container">
         <div className="about-copy-container">
           <h2 className="about-title">
             <span className="about-title-curtain"></span>
-            When life gives you lemon.
+            When life gives you a lemon.
           </h2>
           <p className="about-copy">
-            We help you take control of your fridge. Zero-calorie, zero-sugar
-            hydrating wellness drops to add to any type of beverage.
+            Swap it for some chocolate, a mango or a cone of delicious
+            strawberry ice cream. All the best things in life.
           </p>
+          <div className="cta">Swap Now</div>
         </div>
         <div className="about-img-container">
-          <div className="about-floating-container">
-            <FontAwesomeIcon className="about-floating-icon" icon={faBurger} />
-          </div>
-          <div className="about-floating-container">
-            <FontAwesomeIcon className="about-floating-icon" icon={faCarrot} />
-          </div>
-          <div className="about-floating-container">
-            <FontAwesomeIcon
-              className="about-floating-icon"
-              icon={faBowlFood}
-            />
-          </div>
+          <img
+            className="about-floating-icon chocolate"
+            src="/assets/chocolate.png"
+            alt=""
+          />
+
+          <img className="about-floating-icon" src="/assets/mango.png" alt="" />
+
+          <img
+            className="about-floating-icon icecream"
+            src="/assets/icecream.png"
+            alt=""
+          />
         </div>
       </div>
     </section>
